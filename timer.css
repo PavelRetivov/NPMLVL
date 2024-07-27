@@ -1,41 +1,108 @@
-#container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+* {
+  padding: 0;
+  margin: 0;
 }
-#timer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    height: 100%;
+
+header {
+  height: 100vh;
+  background: linear-gradient(rgb(22, 5, 182) 0%, rgb(143, 212, 248) 100%);
 }
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+
+#logo {
+  padding: 40px;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/image/TIMER-27-07-2024.png");
+}
+
+#container {
+  background-color: linear-gradient(rgb(22, 5, 182) 0%, rgb(143, 212, 248) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-#times{
-    text-align: center;
+
+#times {
+  text-align: center;
+  height: 50px;
+  border: 5px solid black;
+  border-radius: 10px;
+  font-size: 25px;
 }
-#plus{
-    background-color: green;
-    width: 50px;
-    height: 50px;
-    left: 50px;
+
+#plus {
+  width: 50px;
+  height: 50px;
+  left: 50px;
+  border: 5px solid yellow;
+  background-color: green;
+  border-radius: 5px;
 }
-#minus{
-    background-color: red;
-    width: 50px;
-    height: 50px;
-    left: 50px;
+
+#timer {
+  height: 305px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 70px;
+  height: 180px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 70px;
+  flex-direction: row;
 }
-#start{
-    width: 70px;
-    height: 30px;
+
+#minus {
+  width: 50px;
+  height: 50px;
+  left: 50px;
+  border: 5px solid yellow;
+  background-color: red;
+  border-radius: 5px;
 }
-#running-timer{
-    display: none;
-    flex-direction: column;
-    align-items: center;
+
+#start {
+  font-size: 50px;
+  border: 5px solid red;
+  border-radius: 10px;
+  background-color: green;
 }
+
+#running-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  height: 305px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 70px;
+  height: 205px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 70px;
+}
+
+#stop {
+  font-size: 50px;
+  border: 5px solid green;
+  border-radius: 10px;
+  background-color: red;
+}
+
+/*# sourceMappingURL=timer.css.map */
