@@ -1,0 +1,94 @@
+@mixin center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin backgroundFon(){
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@mixin buttonStopAndStart($borderColor, $backgroundColor){
+    font-size: 50px;
+    border: 5px solid $borderColor;
+    border-radius: 10px;
+    background-color: $backgroundColor;
+}
+@mixin plusAndMinus($color, $backColor){
+    width: 50px;
+    height: 50px;
+    left: 50px;
+    border: 5px solid $color;
+    background-color: $backColor;
+    border-radius: 5px;
+}
+@mixin timerStyle($height){
+  height: 305px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 70px;
+  height: $height;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 70px;
+}
+$logotip: url('/image/TIMER-27-07-2024.png');
+$fon: linear-gradient(rgba(22,5,182,1) 0%, rgba(143,212,248,1) 100%);
+
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    height: 100vh;
+    background: $fon;
+}
+#logo {
+    padding: 40px;
+    height: 180px;
+    @include backgroundFon();
+    background-image: $logotip;
+}
+#container{
+    background-color: $fon;
+    @include center();
+    flex-direction: column;
+    
+}
+#timer{
+    @include center();
+    gap: 50px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#times{
+    text-align: center;
+    height: 50px;
+    border: 5px solid black;
+    border-radius: 10px;
+    font-size: 25px;
+}
+#plus{
+    @include plusAndMinus(yellow, green);
+}
+#timer{
+    @include timerStyle(180px);
+    flex-direction: row;
+}
+#minus{
+    @include plusAndMinus(yellow, red);
+}
+#start{
+    @include buttonStopAndStart(red, green );
+}
+#running-timer{
+    @include center();
+    display: none;
+    @include timerStyle(205px);
+}
+#stop{
+    @include buttonStopAndStart(green, red);
+}
